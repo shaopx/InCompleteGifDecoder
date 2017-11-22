@@ -34,3 +34,6 @@ public class MyAppGlideModule extends AppGlideModule {
     }
 }
 </code></pre>
+
+# 示例GIF
+http://pic.wenwen.soso.com/pqpic/wenwenpic/0/20171116143737-1895154083_gif_398_305_3740344/0
