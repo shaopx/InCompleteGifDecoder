@@ -7,7 +7,7 @@
 
 # 如何使用
 增加一个自定义的AppGlideModule, 如果之前已经有了自定义的AppGlideModule, 那只需要在registerComponents()方法中添加具体的逻辑
-"""
+<pre><code>
 @GlideModule
 public class MyAppGlideModule extends AppGlideModule {
     private static final String TAG = "MyAppGlideModule";
@@ -33,4 +33,4 @@ public class MyAppGlideModule extends AppGlideModule {
 
     }
 }
-"""
+</code></pre>
