@@ -21,12 +21,10 @@ public class MyAppGlideModule extends AppGlideModule {
     public void registerComponents(Context context, Glide glide, Registry registry) {
         super.registerComponents(context, glide, registry);
 
-
-        // init the broken-gif decoder
         List<ImageHeaderParser> imageHeaderParsers = registry.getImageHeaderParsers();
 
-        com.gifdecoder.ByteBufferGifDecoder byteBufferGifDecoder =
-                new com.gifdecoder.ByteBufferGifDecoder(context, imageHeaderParsers, glide.getBitmapPool(), glide.getArrayPool());
+        com.spx.gifdecoder.ByteBufferGifDecoder byteBufferGifDecoder =
+                new com.spx.gifdecoder.ByteBufferGifDecoder(context, imageHeaderParsers, glide.getBitmapPool(), glide.getArrayPool());
         registry.prepend(Registry.BUCKET_GIF, ByteBuffer.class, GifDrawable.class, byteBufferGifDecoder);
 
         registry.prepend(Registry.BUCKET_GIF,
